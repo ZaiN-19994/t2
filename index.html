@@ -1,174 +1,60 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>Mux Player - كل الطرق والأمثلة</title>
-    <!-- تضمين مكتبة Mux Player عبر CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f0f0;
-            color: #333;
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #2563eb;
-        }
-        .section {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        code {
-            background: #f5f5f5;
-            padding: 5px;
-            border-radius: 5px;
-            display: block;
-            margin: 10px 0;
-        }
-        iframe, mux-player {
-            width: 100%;
-            height: 400px;
-            border: none;
-            border-radius: 10px;
-            margin: 10px 0;
-        }
-    </style>
-</head>
-<body>
-    <h1>Mux Player - كل الطرق والأمثلة</h1>
 
-    <!-- قسم التثبيت -->
-    <div class="section">
-        <h2>1. طرق التثبيت</h2>
-        
-        <h3>أ) عبر NPM:</h3>
-        <code>npm install @mux/mux-player@latest</code>
-        <code>npm install @mux/mux-player-react@latest</code>
+<title> || فيلمـ A Working Man (2025)</title>
+<script type="text/javascript">//jwplayer.defaults = { "plugins": {
+//    "ping": {}
+//  } };
 
-        <h3>ب) عبر Yarn:</h3>
-        <code>yarn add @mux/mux-player@latest</code>
-        <code>yarn add @mux/mux-player-react@latest</code>
-
-        <h3>ج) عبر CDN:</h3>
-        <code>&lt;script src="https://cdn.jsdelivr.net/npm/@mux/mux-player"&gt;&lt;/script&gt;</code>
-        <code>&lt;script src="https://cdn.jsdelivr.net/npm/@mux/mux-player-react"&gt;&lt;/script&gt;</code>
-    </div>
-
-    <!-- قسم الأمثلة -->
-    <div class="section">
-        <h2>2. أمثلة الاستخدام</h2>
-
-        <h3>أ) استخدام Web Component:</h3>
-        <code>
-&lt;mux-player
-  playback-id="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
-  metadata-video-title="Test VOD"
-  metadata-viewer-user-id="user-id-007"
-&gt;&lt;/mux-player&gt;
-        </code>
-        <mux-player
-            playback-id="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
-            metadata-video-title="Test VOD"
-            metadata-viewer-user-id="user-id-007"
-        ></mux-player>
-
-        <h3>ب) استخدام iframe:</h3>
-        <code>
-&lt;iframe
-  src="https://player.mux.com/EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs?metadata-video-title=Test%20VOD&metadata-viewer-user-id=user-id-007"
-  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-  allowfullscreen="true"
-&gt;&lt;/iframe&gt;
-        </code>
-        <iframe
-            src="https://player.mux.com/EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs?metadata-video-title=Test%20VOD&metadata-viewer-user-id=user-id-007"
-            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-            allowfullscreen="true"
-        ></iframe>
-
-        <h3>ج) استخدام React:</h3>
-        <code>
-import MuxPlayer from "@mux/mux-player-react";
-
-export default function App() {
-  return (
-    &lt;MuxPlayer
-      playbackId="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
-      metadata={{
-        video_id: "video-id-123456",
-        video_title: "Test video title",
-        viewer_user_id: "user-id-007",
-      }}
-    /&gt;
-  );
-}
-        </code>
-
-        <h3>د) استخدام Svelte:</h3>
-        <code>
-&lt;script lang="ts"&gt;
-  import { onMount } from "svelte";
-  onMount(async () => {
-    await import("@mux/mux-player");
+jwplayer("vplayer").setup({
+    sources: [{
+file:"https://master.c.scdns.io/stream/v2/Obdl4YGMJ6lpZIzm5b7fvA/1745622789/normal/0/102.46.111.205/no/01d7b660408b6eae4cd057a54d3685e2/web184.faselhd.cafe/master.m3u8",label:"480p"},
+              {file:"",label:"320p"
+              }],
+    image: "https://m.media-amazon.com/images/M/MV5BYzA3MzNlZTItNjQ3Mi00MTUwLWFmZTktNGVjYTYwNWFkMzI5XkEyXkFqcGc@._V1_.jpg",
+    width: "100%", 
+    height: "100%",
+    stretching: "exactfit",
+    duration: "86400",
+      //aspectratio: "16:9",
+    preload: 'auto',
+    androidhls: "true",
+    hlshtml: "true",
+    primary: "html5",
+    startparam: "start"
+    
+    ,tracks: []
+    ,"sharing": {code: "%3CIFRAME SRC%3D%22https%3A%2F%2Fv.aflam.news%2Fembed-73tpzp0ge3nl.html%22 FRAMEBORDER%3D0 MARGINWIDTH%3D0 MARGINHEIGHT%3D0 SCROLLING%3DNO WIDTH%3D640 HEIGHT%3D360 allowfullscreen%3E%3C%2FIFRAME%3E", link: "https://v.aflam.news/73tpzp0ge3nl.html", sites: [] },abouttext:"", aboutlink:"https://v.aflam.news",cast: {},playbackRateControls: "true", playbackRates: [0.5, 1, 2, 3]
   });
-&lt;/script&gt;
+var vvplay,vvad,x2ok=0;
+var vastdone1=0,vastdone2=0;
+var player = jwplayer();
+player.on('time', function(x) { 
+    if(5>0 && x.position>=5 && vvad!=1){vvad=1;$('div.video_ad_fadein').fadeIn('slow');}
+    if(x2ok==0 && x.position>=5260 && x.position<=(5260+2)){x2ok=x.position;}
+    
+});
+player.on('play', function(x) { doPlay(x); });
+player.on('complete', function() { $('div.video_ad').show();  });
 
-&lt;mux-player
-  playback-id="g65IqSFtWdpGR100c2W8VUHrfIVWTNRen"
-  metadata-video-title="Svelte Kit: Episode 2"
-  metadata-viewer-user-id="user-id-sveltekit007"
-/&gt;
-        </code>
+function doPlay(x)
+{
+  $('div.video_ad').hide();
+  if(vvplay)return;
+  vvplay=1;
+  adb=0;
+  if( window.cRAds === undefined ){ adb=1; }
+  $.get('https://v.aflam.news/dl?op=view&file_code=73tpzp0ge3nl&hash=800710-0-0-1740793150-85be24b0460aa7d0d3c2b41d37237d3d&embed=&adb='+adb, function(data) {$('#fviews').html(data);} );
+  
+  
+}
+    player.on('ready', function(){
+    		
 
-        <h3>هـ) استخدام Vue:</h3>
-        <code>
-&lt;script setup lang="ts"&gt;
-  import "@mux/mux-player";
-&lt;/script&gt;
+            //var mybtn=$("<div style='padding-left: 5px; margin-right: 5px; margin-top: 10px; background-image: url(/images/ico.png);background-repeat: no-repeat;' class='jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-logo'></div>");
+            //mybtn.click(showCCform);
+            //$(".jw-controlbar-right-group").append(mybtn);
+    });
 
-&lt;template&gt;
-  &lt;main&gt;
-    &lt;mux-player
-      playback-id="g65IqSFtWdpGR100c2W8VUHrfIVWTNRen"
-      metadata-video-title="Vue 3: Episode 2"
-      metadata-viewer-user-id="user-id-vue3007"
-    /&gt;
-  &lt;/main&gt;
-&lt;/template&gt;
-        </code>
-    </div>
 
-    <!-- قسم التخصيص -->
-    <div class="section">
-        <h2>3. تخصيص Mux Player</h2>
 
-        <h3>أ) إضافة بوستر:</h3>
-        <code>
-&lt;mux-player
-  playback-id="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
-  poster="https://via.placeholder.com/1200x675"
-&gt;&lt;/mux-player&gt;
-        </code>
-        <mux-player
-            playback-id="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
-            poster="https://via.placeholder.com/1200x675"
-        ></mux-player>
 
-        <h3>ب) إظهار الفيديو كبث مباشر:</h3>
-        <code>
-&lt;mux-player
-  playback-id="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
-  stream-type="live"
-&gt;&lt;/mux-player&gt;
-        </code>
-        <mux-player
-            playback-id="EcHgOK9coz5K4rjSwOkoE7Y7O01201YMIC200RI6lNxnhs"
-            stream-type="live"
-        ></mux-player>
-    </div>
-</body>
-</html>
+</script>
